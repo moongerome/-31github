@@ -1,0 +1,160 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 3px 3px;
+}
+.container {
+  width: 1200px;
+  margin: auto;
+}
+p a {
+  color: #4e8fda;
+}
+li a {
+  color: black;
+}
+li img {
+  margin-top: 15px;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(184, 184, 184);
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.leftLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-right: 1px solid rgb(184, 184, 184);
+  width: 100px;
+}
+.leftlink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: rgb(151, 151, 151);
+}
+.logo {
+  width: 80px;
+}
+.search {
+  width: 800px;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #000000;
+  border-right: none;
+  padding: 5px;
+  height: 25px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+  margin: 0;
+}
+
+.searchTerm:focus {
+  color: #101111;
+}
+
+.searchButton {
+  margin: 0;
+  width: 100px;
+  height: 41px;
+  border: 1px solid #060707;
+  background: #4e8fda;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 0;
+}
+.mainPart {
+  display: flex;
+  justify-content: start;
+}
+#rightPart {
+  margin-top: 20px;
+}
+.slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.slider {
+  width: 1000px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url(./images/Rome.jpeg);
+  background-repeat: no-repeat;
+  animation: slide 20s infinite;
+  background-position: center center;
+  background-size: cover;
+}
+
+@keyframes slide {
+  25% {
+    background: url(https://www.goworldtravelguide.com/wp-content/uploads/2014/06/Sydney-Opera-House-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  50% {
+    background: url(./images/Rome.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  75% {
+    background: url(./images/Vue-aérienne-Paris-Tour-Eiffel-coucher-de-soleil-_-630x405-_-©-Fotolia.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  100% {
+    background: url(./images/Hero-Ultimate-Thing-To-Do-Spain-shutterstock_362200070.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+#destination {
+  margin-top: 15px;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: rgb(178, 208, 235);
+  border-radius: 10px;
+}
+#maps {
+  width: 1000px;
+}
+.someList h4 {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+.listFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+.ulList {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgb(181, 178, 178);
+  margin-top: 10px;
+}
