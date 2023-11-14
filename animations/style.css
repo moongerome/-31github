@@ -18,4 +18,5 @@ body {
 }
 .menuButton:hover {
   background-color: blue;
+  color: black;
 }
