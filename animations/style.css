@@ -6,6 +6,7 @@ body {
 nav {
   height: 50px;
   background-color: brown;
+  position: absolute;
 }
 .navigationBar {
   height: 75px;
