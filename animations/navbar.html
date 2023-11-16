@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      /* Add some basic styling to the navbar */
       ul.navbar {
         list-style-type: none;
         margin: 0;
@@ -28,15 +27,22 @@
       li a:hover {
         background-color: #111;
       }
+
+      /* Styling for the page content */
       .content {
         padding: 20px;
-        font-family: Arial, sans-serif;
+        font-family: "Arial", sans-serif;
         line-height: 1.6;
+        background-color: #f8f8f8;
+        color: #333;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 20px;
       }
 
       h1,
       h2 {
-        color: #333;
+        color: #007bff;
       }
 
       p {
@@ -49,18 +55,17 @@
         margin-left: 20px;
       }
 
-      a:hover {
-        text-decoration: underline;
-      }
-
       /* Additional styles for links */
       a {
         color: #007bff;
         text-decoration: none;
       }
-      li a:hover {
-        background-color: #111;
+
+      a:hover {
+        text-decoration: underline;
       }
+
+      /* Styling for the footer */
       footer {
         background-color: #333;
         color: white;
@@ -78,10 +83,10 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <!-- Page content goes here -->
     <!-- Page content -->
     <div class="content">
       <h1 id="home">Welcome to My Website</h1>
@@ -105,23 +110,32 @@
         <li>Content Creation</li>
       </ul>
 
-      
       <h2 id="portfolio">Portfolio</h2>
       <div>
         <h3>Project 1</h3>
-        <p>Description of project 1 goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>
+          Description of project 1 goes here. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit.
+        </p>
       </div>
-  
+
       <div>
         <h3>Project 2</h3>
-        <p>Description of project 2 goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>
+          Description of project 2 goes here. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit.
+        </p>
       </div>
-  
+
       <h2 id="contact">Contact Us</h2>
-      <p>Feel free to reach out to us for any inquiries or collaborations. You can contact us via email at <a href="mailto:info@example.com">info@example.com</a>.</p>
+      <p>
+        Feel free to reach out to us for any inquiries or collaborations. You
+        can contact us via email at
+        <a href="mailto:info@example.com">info@example.com</a>.
+      </p>
     </div>
-  
-      <footer>&copy; 2023 Your Website Name. All rights reserved.</footer>
-    </div>
+
+    <!-- Footer -->
+    <footer>&copy; 2023 Your Website Name. All rights reserved.</footer>
   </body>
 </html>
