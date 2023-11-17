@@ -1,0 +1,53 @@
+body {
+  background-color: #d9d9f9;
+}
+#myTable {
+  margin: 0 auto;
+  outline: 1px solid;
+  background-color: rgb(250, 214, 220);
+}
+
+th {
+  outline: 1px solid;
+}
+td {
+  margin: 0 auto;
+  outline: 1px solid;
+}
+div {
+  display: flex;
+  justify-content: center;
+}
+#searchBar {
+  width: 400px;
+  background-color: white;
+  border: thin solid blue;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 3px;
+}
+#dropDown {
+  background-color: white;
+  border: thin solid blue;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 3px;
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#myTable tr {
+  animation: slideInFromTop 0.5s ease-in-out;
+}
