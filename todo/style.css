@@ -39,3 +39,17 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+.done {
+  text-decoration: line-through;
+  color: #888;
+}
+
+button.close {
+  background-color: #f44336;
+  color: #fff;
+  margin-left: 10px;
+}
+
+button.close:hover {
+  background-color: #d32f2f;
+}
