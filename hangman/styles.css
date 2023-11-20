@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#hangman-container {
+  text-align: center;
+}
+
+#word-display {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+#incorrect-letters {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+#attempts-left {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+#hangman-image {
+  width: 200px;
+  height: 200px;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Hangman-0.png/1200px-Hangman-0.png")
+    center center no-repeat;
+  background-size: cover;
+  margin: 10px 0;
+}
+
+#letter-input {
+  width: 30px;
+  text-align: center;
+  margin: 10px 5px;
+}
+
+button {
+  margin: 10px 0;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
