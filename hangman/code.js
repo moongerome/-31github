@@ -4,10 +4,15 @@ const words = (words = [
   { question: "Popular web browser", answer: "CHROME" },
   // Add more questions and answers as needed
 ]);
-let selectedWord = words[Math.floor(Math.random() * words.length)];
+
+// Select a random word from the array
+let selectedWordObj = words[Math.floor(Math.random() * words.length)];
 let guessedWord = Array.from(selectedWord).fill("_");
 let incorrectLetters = [];
-let attempts = 6;
+let attempts = 10;
+// Access the question and answer using selectedWordObj
+let question = selectedWordObj.question;
+let selectedWord = selectedWordObj.answer;
 
 function displayWord() {
   document.getElementById("word-display").innerText = guessedWord.join(" ");
