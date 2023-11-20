@@ -55,10 +55,10 @@ function guessLetter() {
     return;
   }
 
-  if (selectedWord.includes(letter)) {
-    for (let i = 0; i < selectedWord.length; i++) {
-      if (selectedWord[i] === letter) {
-        guessedWord[i] = letter;
+  if (selectedWordObj.includes(letter)) {
+    for (let i = 0; i < selectedWordObj.length; i++) {
+      if (selectedWordObj[i] === letter) {
+        guessedWordObj[i] = letter;
       }
     }
     displayWord();
@@ -70,14 +70,14 @@ function guessLetter() {
     displayHangmanImage();
   }
 
-  if (guessedWord.join("") === selectedWord) {
+  if (guessedWord.join("") === selectedWordObj) {
     alert("Congratulations! You guessed the word!");
     resetGame();
   }
 
   if (attempts === 0) {
     alert(
-      `Sorry, you ran out of attempts. The correct word was "${selectedWord}".`
+      `Sorry, you ran out of attempts. The correct word was "${selectedWordObj}".`
     );
     resetGame();
   }
@@ -86,8 +86,8 @@ function guessLetter() {
 }
 
 function resetGame() {
-  selectedWord = words[Math.floor(Math.random() * words.length)];
-  guessedWord = Array.from(selectedWord).fill("_");
+  selectedWordObj = words[Math.floor(Math.random() * words.length)];
+  guessedWord = Array.from(selectedWordObj).fill("_");
   incorrectLetters = [];
   attempts = 6;
   displayWord();
