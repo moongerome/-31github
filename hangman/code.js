@@ -1,4 +1,9 @@
-const words = ["hangman", "javascript", "programming", "web", "developer"];
+const words = (words = [
+  { question: "Capital of France", answer: "PARIS" },
+  { question: "Programming language", answer: "JAVASCRIPT" },
+  { question: "Popular web browser", answer: "CHROME" },
+  // Add more questions and answers as needed
+]);
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 let guessedWord = Array.from(selectedWord).fill("_");
 let incorrectLetters = [];
