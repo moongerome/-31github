@@ -21,8 +21,8 @@ function displayAttempts() {
 function displayHangmanImage() {
   const hangmanImage = document.getElementById("hangman-image");
   hangmanImage.style.background = `url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Hangman-${
-    6 - attempts
-  }.png/1200px-Hangman-${6 - attempts}.png') center center no-repeat`;
+    10 - attempts
+  }.png/1200px-Hangman-${10 - attempts}.png') center center no-repeat`;
   hangmanImage.style.backgroundSize = "cover";
 }
 
