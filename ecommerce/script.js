@@ -13,7 +13,13 @@ const products = [
     image:
       "https://static.ticimax.cloud/31866/uploads/urunresimleri/buyuk/kadin-suet-ceketfiona-bej-suet-kot-ceket-0d43.jpg",
   },
-  { id: 3, name: "Product 3", price: 39.99, image: "product3.jpg" },
+  {
+    id: 3,
+    name: "Product 3",
+    price: 39.99,
+    image:
+      "https://cdn-img.prettylittlething.com/a/c/c/e/acce717e854e521d9d33681b26c330fac7b25851_CND3378_1.jpg",
+  },
   // Add more products as needed
 ];
 
