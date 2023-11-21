@@ -1,6 +1,18 @@
 const products = [
-  { id: 1, name: "Product 1", price: 19.99, image: "product1.jpg" },
-  { id: 2, name: "Product 2", price: 29.99, image: "product2.jpg" },
+  {
+    id: 1,
+    name: "Product 1",
+    price: 19.99,
+    image:
+      "https://aritzia.scene7.com/is/image/Aritzia/large/f23_01_a05_102564_16992_on_a.jpg",
+  },
+  {
+    id: 2,
+    name: "Product 2",
+    price: 29.99,
+    image:
+      "https://static.ticimax.cloud/31866/uploads/urunresimleri/buyuk/kadin-suet-ceketfiona-bej-suet-kot-ceket-0d43.jpg",
+  },
   { id: 3, name: "Product 3", price: 39.99, image: "product3.jpg" },
   // Add more products as needed
 ];
