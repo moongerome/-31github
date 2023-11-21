@@ -27,6 +27,13 @@ const products = [
     image:
       "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/2334181/2018/6/14/e381c9f4-4ddb-4828-ba51-eb1bcc9628451528967710986-MANGO-MAN-Men-Coats-9291528967710867-1.jpg",
   },
+  {
+    id: 5,
+    name: "Product 5",
+    price: 39.99,
+    image:
+      "https://thehouseofrare.com/cdn/shop/products/IMG_0007_e730fd87-9d8a-4751-a849-8a1f10530ae5.jpg?v=1696338074",
+  },
   // Add more products as needed
 ];
 
