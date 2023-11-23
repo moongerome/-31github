@@ -1,5 +1,6 @@
 const express = require("express");
-const path = require("path"); // Add this line
+const cors = require("cors");
+const path = require("path");
 
 const app = express();
 
@@ -10,13 +11,13 @@ const posts = [
   { username: "user3", text: "This is post 3." },
 ];
 
+app.use(cors()); // Enable CORS
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
-// Change the API endpoint to return JSON
 app.get("/api/posts", (req, res) => {
   res.json(posts);
 });
