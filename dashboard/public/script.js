@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const postsContainer = document.getElementById("posts-container");
 
   // Fetch posts from the server
-  fetch("http://localhost:3000/api/posts") // Update the URL here
+  fetch("http://localhost:3000/api/posts")
+    // Update the URL here
     .then((response) => {
       console.log("Response status:", response.status);
       return response.json();
