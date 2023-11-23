@@ -1,4 +1,6 @@
 const express = require("express");
+const path = require("path"); // Add this line
+
 const app = express();
 
 // Dummy data for social media posts
@@ -11,9 +13,10 @@ const posts = [
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
+// Change the API endpoint to return JSON
 app.get("/api/posts", (req, res) => {
   res.json(posts);
 });
