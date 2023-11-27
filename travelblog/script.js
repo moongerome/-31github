@@ -18,6 +18,8 @@ function addPost() {
       postContainer.appendChild(postTitle);
       postContainer.appendChild(postContent);
 
+      document.querySelector("main").appendChild(postContainer);
+
       // Clear the form fields
       document.getElementById("title").value = "";
       document.getElementById("content").value = "";
