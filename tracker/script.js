@@ -1,5 +1,6 @@
 let exercises = [];
-
+let timerInterval;
+let timerSeconds = 0;
 function addExercise() {
   const exerciseInput = document.getElementById("exercise");
   const durationInput = document.getElementById("duration");
