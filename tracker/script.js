@@ -25,6 +25,7 @@ function addExercise() {
   // Clear input fields
   exerciseInput.value = "";
   durationInput.value = 1;
+  resetTimerDisplay();
 }
 
 function updateExerciseList() {
@@ -59,4 +60,34 @@ function updateSummary() {
 
   totalDurationSpan.textContent = totalDuration;
   totalExercisesSpan.textContent = totalExercises;
+}
+function startTimer() {
+  const timerDisplay = document.getElementById("timer-display");
+  timerInterval = setInterval(() => {
+    timerSeconds++;
+    timerDisplay.textContent = formatTime(timerSeconds);
+  }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(timerInterval);
+}
+
+function resetTimer() {
+  stopTimer();
+  timerSeconds = 0;
+  resetTimerDisplay();
+}
+function resetTimerDisplay() {
+  const timerDisplay = document.getElementById("timer-display");
+  timerDisplay.textContent = "00:00";
+}
+
+function formatTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+  const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+  const formattedSeconds =
+    remainingSeconds < 10 ? `0${remainingSeconds}` : remainingSeconds;
+  return `${formattedMinutes}:${formattedSeconds}`;
 }
