@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        text-align: center;
+      }
+      #quiz-container {
+        max-width: 600px;
+        margin: auto;
+      }
+      .question {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .options {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .option {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+      .option:hover {
+        background-color: #2980b9;
+      }
+      #result {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="quiz-container">
+      <h2>Quiz Game</h2>
+      <div id="question1" class="question">What is the capital of France?</div>
+      <div class="options">
+        <button class="option" onclick="checkAnswer(1, 'Paris')">Paris</button>
+        <button class="option" onclick="checkAnswer(1, 'Berlin')">
+          Berlin
+        </button>
+        <button class="option" onclick="checkAnswer(1, 'Madrid')">
+          Madrid
+        </button>
+      </div>
+
+      <div id="question2" class="question">
+        Which planet is known as the Red Planet?
+      </div>
+      <div class="options">
+        <button class="option" onclick="checkAnswer(2, 'Mars')">Mars</button>
+        <button class="option" onclick="checkAnswer(2, 'Venus')">Venus</button>
+        <button class="option" onclick="checkAnswer(2, 'Jupiter')">
+          Jupiter
+        </button>
+      </div>
+
+      <div id="question3" class="question">
+        What is the largest mammal in the world?
+      </div>
+      <div class="options">
+        <button class="option" onclick="checkAnswer(3, 'Elephant')">
+          Elephant
+        </button>
+        <button class="option" onclick="checkAnswer(3, 'Blue Whale')">
+          Blue Whale
+        </button>
+        <button class="option" onclick="checkAnswer(3, 'Giraffe')">
+          Giraffe
+        </button>
+      </div>
+
+      <div id="result"></div>
+    </div>
+
+    <script>
+      let score = 0;
+
+      function checkAnswer(questionNumber, selectedAnswer) {
+        const correctAnswers = {
+          1: "Paris",
+          2: "Mars",
+          3: "Blue Whale",
+        };
+
+        const correctAnswer = correctAnswers[questionNumber];
+
+        if (selectedAnswer === correctAnswer) {
+          score++;
+        }
+
+        const nextQuestionNumber = questionNumber + 1;
+        const nextQuestionElement = document.getElementById(
+          `question${nextQuestionNumber}`
+        );
+
+        if (nextQuestionElement) {
+          // Hide current question and show the next one
+          document.getElementById(`question${questionNumber}`).style.display =
+            "none";
+          nextQuestionElement.style.display = "block";
+        } else {
+          // Display the final score
+          document.getElementById(
+            "result"
+          ).innerHTML = `Your Score: ${score} out of 3`;
+        }
+      }
+    </script>
+  </body>
+</html>
