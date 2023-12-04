@@ -19,14 +19,26 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function flipCard() {
-    if (flippedCards.length < 2 && !flippedCards.includes(this)) {
+    if (
+      flippedCards.length < 2 &&
+      !flippedCards.includes(this) &&
+      !this.classList.contains("flipped") &&
+      flippedCards.length !== 1
+    ) {
       this.classList.add("flipped");
       flippedCards.push(this);
 
       if (flippedCards.length === 2) {
-        setTimeout(checkMatch, 500);
+        setTimeout(checkMatch, 1000);
       }
     }
+  }
+
+  function hideFlippedCards() {
+    flippedCards.forEach((card) => {
+      card.classList.remove("flipped");
+    });
+    flippedCards = [];
   }
 
   function checkMatch() {
@@ -43,8 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Congratulations! You matched all the cards.");
       }
     } else {
-      card1.classList.remove("flipped");
-      card2.classList.remove("flipped");
+      setTimeout(hideFlippedCards, 500);
     }
 
     flippedCards = [];
