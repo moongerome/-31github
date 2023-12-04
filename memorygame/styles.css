@@ -12,7 +12,20 @@ body {
   grid-template-columns: repeat(4, 100px);
   grid-gap: 10px;
 }
-
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
 .card.matched {
   background-color: #8cffa9;
   cursor: default;
