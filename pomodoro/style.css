@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.pomodoro-container {
+  text-align: center;
+}
+
+.timer {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.start-btn,
+.reset-btn {
+  font-size: 1rem;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.start-btn:hover,
+.reset-btn:hover {
+  background-color: #45a049;
+}
