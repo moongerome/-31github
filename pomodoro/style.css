@@ -29,3 +29,8 @@ body {
   border: none;
   border-radius: 5px;
 }
+.start-btn:hover,
+.pause-btn:hover,
+.reset-btn:hover {
+  background-color: #45a049;
+}
