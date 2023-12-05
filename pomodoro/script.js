@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const timerDisplay = document.getElementById("timer");
   const startBtn = document.getElementById("startBtn");
+  const pauseBtn = document.getElementById("pauseBtn");
   const resetBtn = document.getElementById("resetBtn");
 
   function updateDisplay() {
@@ -34,6 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function pauseTimer() {
+    clearInterval(timer);
+    isRunning = false;
+  }
+
   function resetTimer() {
     clearInterval(timer);
     minutes = 25;
@@ -43,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   startBtn.addEventListener("click", startTimer);
+  pauseBtn.addEventListener("click", pauseTimer);
   resetBtn.addEventListener("click", resetTimer);
 
   // Initial display
