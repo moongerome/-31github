@@ -33,11 +33,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-
-  function hideFlippedCards() {
-    flippedCards.forEach((card) => {
-      card.classList.remove("flipped");
-    });
-    flippedCards = [];
-  }
 });
