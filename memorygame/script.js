@@ -40,24 +40,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     flippedCards = [];
   }
-
-  function checkMatch() {
-    const [card1, card2] = flippedCards;
-    const index1 = card1.getAttribute("data-index");
-    const index2 = card2.getAttribute("data-index");
-
-    if (cards[index1] === cards[index2]) {
-      card1.classList.add("matched");
-      card2.classList.add("matched");
-      matchedCards.push(card1, card2);
-
-      if (matchedCards.length === cards.length) {
-        alert("Congratulations! You matched all the cards.");
-      }
-    } else {
-      setTimeout(hideFlippedCards, 500);
-    }
-
-    flippedCards = [];
-  }
 });
