@@ -17,20 +17,4 @@ document.addEventListener("DOMContentLoaded", () => {
     cardElement.addEventListener("click", flipCard);
     memoryGame.appendChild(cardElement);
   });
-
-  function flipCard() {
-    if (
-      flippedCards.length < 2 &&
-      !flippedCards.includes(this) &&
-      !this.classList.contains("flipped") &&
-      flippedCards.length !== 1
-    ) {
-      this.classList.add("flipped");
-      flippedCards.push(this);
-
-      if (flippedCards.length === 2) {
-        setTimeout(checkMatch, 1000);
-      }
-    }
-  }
 });
