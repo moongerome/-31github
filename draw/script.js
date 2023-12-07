@@ -21,4 +21,28 @@ document.addEventListener("DOMContentLoaded", () => {
     isDrawing = false;
     context.beginPath(); // Start a new path for the next line
   }
+
+  function draw(e) {
+    if (!isDrawing) return;
+
+    context.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+    context.stroke();
+    context.beginPath();
+    context.arc(
+      e.clientX - canvas.offsetLeft,
+      e.clientY - canvas.offsetTop,
+      context.lineWidth / 2,
+      0,
+      Math.PI * 2
+    );
+    context.fill();
+    context.beginPath();
+    context.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+  }
+
+  // Event listeners
+  canvas.addEventListener("mousedown", startDrawing);
+  canvas.addEventListener("mousemove", draw);
+  canvas.addEventListener("mouseup", stopDrawing);
+  canvas.addEventListener("mouseout", stopDrawing);
 });
