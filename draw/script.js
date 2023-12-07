@@ -11,4 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
   context.lineWidth = 5;
   context.lineCap = "round";
   context.strokeStyle = "#000";
+
+  function startDrawing(e) {
+    isDrawing = true;
+    draw(e);
+  }
+
+  function stopDrawing() {
+    isDrawing = false;
+    context.beginPath(); // Start a new path for the next line
+  }
 });
