@@ -2,6 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
   margin: 0;
   background-color: #f0f0f0;
@@ -9,4 +10,13 @@ body {
 
 canvas {
   border: 2px solid #333;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button,
+input {
+  margin: 5px;
 }
