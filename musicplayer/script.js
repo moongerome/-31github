@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const playlist = document.getElementById("playlist");
 
   const songs = [
-    { title: "Song 1", source: "path/to/song1.mp3" },
-    { title: "Song 2", source: "path/to/song2.mp3" },
+    { title: "Song 1", source: "song.mp3" },
+    { title: "Song 2", source: "song.mp3" },
     // Add more songs as needed
   ];
 
