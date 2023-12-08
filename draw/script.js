@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("drawingCanvas");
   const context = canvas.getContext("2d");
+  const clearBtn = document.getElementById("clearBtn");
+  const colorPicker = document.getElementById("colorPicker");
   let isDrawing = false;
 
   // Set canvas size
@@ -40,9 +42,20 @@ document.addEventListener("DOMContentLoaded", () => {
     context.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
   }
 
+  function clearCanvas() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+  }
+
+  function changeColor() {
+    context.strokeStyle = colorPicker.value;
+  }
+
   // Event listeners
   canvas.addEventListener("mousedown", startDrawing);
   canvas.addEventListener("mousemove", draw);
   canvas.addEventListener("mouseup", stopDrawing);
   canvas.addEventListener("mouseout", stopDrawing);
+
+  clearBtn.addEventListener("click", clearCanvas);
+  colorPicker.addEventListener("input", changeColor);
 });
